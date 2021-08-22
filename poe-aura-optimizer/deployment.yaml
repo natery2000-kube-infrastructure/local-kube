@@ -4,7 +4,7 @@ metadata:
   name: poe-aura-optimizer
 
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: web
