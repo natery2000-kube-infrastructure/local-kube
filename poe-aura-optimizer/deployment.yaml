@@ -4,7 +4,7 @@ metadata:
   name: poe-aura-optimizer-deployment
 
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: poe-aura-optimizer-label

@@ -10,5 +10,5 @@ rules:
     resources: ["services"]
     verbs: ["get", "patch"]
   - apiGroups: [""]
-    resources: ["service accounts"]
+    resources: ["serviceaccounts"]
     verbs: ["get"]
