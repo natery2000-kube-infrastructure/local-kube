@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-auto-apply-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-auto-apply-label
+  template:
+    metadata:
+      labels:
+        app: kube-auto-apply-label
+    spec:    
+      serviceAccountName: kubectl-apply-serviceaccount
+      containers:
+        - name: kube-auto-apply
+          image: natery2000/kube-auto-apply
