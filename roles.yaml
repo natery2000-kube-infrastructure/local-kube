@@ -9,3 +9,6 @@ rules:
   - apiGroups: [""]
     resources: ["services"]
     verbs: ["get", "patch"]
+  - apiGroups: [""]
+    resources: ["service accounts"]
+    verbs: ["get"]
