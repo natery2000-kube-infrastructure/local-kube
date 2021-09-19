@@ -15,6 +15,6 @@ spec:
     spec:    
       containers:
         - name: poe-aura-optimizer
-          image: natery2000/poe-aura-optimizer
+          image: natery2000/poe-aura-optimizer:1.0.9
           ports:
             - containerPort: 4000
