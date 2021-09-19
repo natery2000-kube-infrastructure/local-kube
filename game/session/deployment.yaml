@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-session-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game-session-label
+  template:
+    metadata:
+      labels:
+        app: game-session-label
+    spec:    
+      containers:
+        - name: game-session
+          image: natery2000-game/game-session:1.0.4
+          ports:
+            - containerPort: 4000
