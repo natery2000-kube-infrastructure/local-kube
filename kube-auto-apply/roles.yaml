@@ -21,3 +21,6 @@ rules:
   - apiGroups: ["rbac.authorization.k8s.io"]
     resources: ["roles"]
     verbs: ["create", "update", "delete", "get", "patch"]
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["configmaps"]
+    verbs: ["create", "update", "delete", "get", "patch"]
