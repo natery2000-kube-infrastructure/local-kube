@@ -15,6 +15,6 @@ spec:
     spec:    
       containers:
         - name: game-session
-          image: natery2000/game-session:1.0.4
+          image: natery2000/game-session:1.0.5
           ports:
             - containerPort: 4000
