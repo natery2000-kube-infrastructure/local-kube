@@ -4,11 +4,11 @@ metadata:
   name: kubectl-apply-role
 rules:
   - apiGroups: [""]
-    resources: ["services", "serviceaccounts"]
+    resources: ["services", "serviceaccounts", "configmaps"]
     verbs: ["create", "update", "delete", "get", "patch"]
   - apiGroups: ["extensions", "apps"]
     resources: ["deployments"]
     verbs: ["create", "update", "delete", "get", "patch"]
   - apiGroups: ["rbac.authorization.k8s.io"]
-    resources: ["rolebindings", "clusterrolebindings", "roles", "configmaps", "persistentvolumes", "clusterroles"]
+    resources: ["rolebindings", "clusterrolebindings", "roles", "persistentvolumes", "clusterroles"]
     verbs: ["create", "update", "delete", "get", "patch"]
