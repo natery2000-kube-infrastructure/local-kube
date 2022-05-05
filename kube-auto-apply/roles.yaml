@@ -4,7 +4,7 @@ metadata:
   name: kubectl-apply-role
 rules:
   - apiGroups: [""]
-    resources: ["services", "serviceaccounts", "configmaps"]
+    resources: ["services", "serviceaccounts", "configmaps", "persistentvolumes"]
     verbs: ["create", "update", "delete", "get", "patch"]
   - apiGroups: ["extensions", "apps"]
     resources: ["deployments"]
