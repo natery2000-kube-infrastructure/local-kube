@@ -5,6 +5,7 @@ metadata:
 spec:
   ports:
   - port: 3306
+    targetPort: 4201
   selector:
     app: streaming-mysql
   clusterIP: None
