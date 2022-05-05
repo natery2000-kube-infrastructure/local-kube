@@ -7,7 +7,7 @@ spec:
   selector:
     app: streaming-mysql-label
   ports:
-  - port: 3306
-    targetPort: 4201
+  - port: 4201
+    targetPort: 3306
     protocol: TCP
     nodePort: 32001
