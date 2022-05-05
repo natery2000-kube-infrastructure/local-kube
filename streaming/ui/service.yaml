@@ -7,6 +7,7 @@ spec:
   selector:
     app: streaming-ui-label
   ports:
-    - port: 4200
-      targetPort: 4000
-      protocol: TCP
+  - port: 4200
+    targetPort: 4000
+    protocol: TCP
+    nodePort: 32000
