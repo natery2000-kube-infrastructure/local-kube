@@ -30,4 +30,4 @@ spec:
       volumes:
       - name: streaming-mysql-pv
         persistentVolumeClaim:
-          claimName: streamping-mysql-pvc
+          claimName: streaming-mysql-pvc
