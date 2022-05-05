@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streaming-ui-deployment
+
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: streaming-ui-label
+  template:
+    metadata:
+      labels:
+        app: streaming-ui-label
+    spec:    
+      containers:
+        - name: streaming-ui
+          image: natery2000/streaming-ui:1.0.5
+          ports:
+            - containerPort: 4000
