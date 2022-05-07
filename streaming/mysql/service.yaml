@@ -3,11 +3,8 @@ kind: Service
 metadata:
   name: streaming-mysql-service
 spec:
-  type: LoadBalancer
   selector:
-    app: streaming-mysql-label
+    app: streaming-mysql
   ports:
-  - port: 4201
-    targetPort: 3306
-    protocol: TCP
-    nodePort: 32001
+  - port: 3306
+  clusterIP: None
