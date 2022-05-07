@@ -8,6 +8,5 @@ spec:
     app: poe-aura-optimizer-label
   ports:
     - port: 4000
-      targetPort: 4000
+      targetPort: poe-aura-optimizer-port
       protocol: TCP
-      nodePort: 31000
