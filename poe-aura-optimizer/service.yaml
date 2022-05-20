@@ -5,8 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: poe-aura-optimizer-label
+    app: poe-aura-optimizer
   ports:
-    - port: 4000
-      targetPort: poe-aura-optimizer-port
+    - port: 40000
+      targetPort: pao-port
       protocol: TCP

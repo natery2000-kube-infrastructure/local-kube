@@ -5,9 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: streaming-ui-label
+    app: streaming-ui
   ports:
   - port: 4200
     targetPort: 4000
     protocol: TCP
-    nodePort: 32000

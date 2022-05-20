@@ -4,7 +4,7 @@ metadata:
   name: poe-aura-optimizer-deployment
 
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: poe-aura-optimizer
@@ -18,4 +18,4 @@ spec:
           image: natery2000/poe-aura-optimizer:1.0.9
           ports:
             - containerPort: 4000
-              name: poe-aura-optimizer-port
+              name: pao-port
