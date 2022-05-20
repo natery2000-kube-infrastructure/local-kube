@@ -14,7 +14,7 @@ spec:
         app: streaming-couchdb
     spec:
       containers:
-        - name: couchdb
+        - name: streaming-couchdb
           image: couchdb
           imagePullPolicy: Always
           ports:
