@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: streaming-ui-label
+      app: streaming-ui
   template:
     metadata:
       labels:
-        app: streaming-ui-label
+        app: streaming-ui
     spec:    
       containers:
         - name: streaming-ui
