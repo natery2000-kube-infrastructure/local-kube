@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: streaming-ui-deployment
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: streaming-ui-label
@@ -14,7 +14,7 @@ spec:
     spec:    
       containers:
         - name: streaming-ui
-          image: natery2000/streaming-ui:1.0.5
+          image: natery2000/streaming-ui:1.0.2
           ports:
             - name: str-ui-port
               containerPort: 4000

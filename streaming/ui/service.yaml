@@ -7,6 +7,6 @@ spec:
   selector:
     app: streaming-ui
   ports:
-  - port: 4200
+  - port: 41001
     targetPort: str-ui-port
     protocol: TCP
