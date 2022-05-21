@@ -14,7 +14,7 @@ spec:
     spec:    
       containers:
         - name: streaming-ui
-          image: natery2000/streaming-ui:1.0.3
+          image: natery2000/streaming-ui:1.0.4
           ports:
             - name: str-ui-port
               containerPort: 4000
