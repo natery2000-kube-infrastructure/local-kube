@@ -34,5 +34,6 @@ rules:
         "events",
         "pods",
         "pods/log",
+        "secrets",
       ]
     verbs: ["create", "update", "delete", "get", "patch", "list"]

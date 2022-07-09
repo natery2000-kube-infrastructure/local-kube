@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-event-responder-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-event-responder-label
+  template:
+    metadata:
+      labels:
+        app: kube-event-responder-label
+    spec:    
+      containers:
+        - name: kube-event-responder
+          image: natery2000/kube-event-responder:1.0.8
