@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: kubernetes-dashboard-cluster-role
+  name: kubectl-apply-cluster-role
 rules:
   - apiGroups:
       [
@@ -10,7 +10,6 @@ rules:
         "apps",
         "rbac.authorization.k8s.io",
         "roles.rbac.authorization.k8s.io",
-        "batch",
       ]
     resources:
       [
@@ -24,15 +23,5 @@ rules:
         "persistentvolumeclaims",
         "clusterrolebindings",
         "clusterroles",
-        "namespaces",
-        "replicationcontrollers",
-        "statefulsets",
-        "replicasets",
-        "daemonsets",
-        "jobs",
-        "cronjobs",
-        "events",
-        "pods",
-        "pods/log",
       ]
-    verbs: ["create", "update", "delete", "get", "patch", "list"]
+    verbs: ["create", "update", "delete", "get", "patch"]
