@@ -36,4 +36,4 @@ rules:
         "pods/log",
         "secrets",
       ]
-    verbs: ["create", "update", "delete", "get", "patch", "list"]
+    verbs: ["create", "update", "delete", "get", "patch", "list", "watch"]
