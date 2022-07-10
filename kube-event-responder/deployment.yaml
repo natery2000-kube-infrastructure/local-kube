@@ -16,4 +16,4 @@ spec:
       serviceAccountName: kube-event-responder-serviceaccount
       containers:
         - name: kube-event-responder
-          image: natery2000/kube-event-responder:1.0.14
+          image: natery2000/kube-event-responder:1.0.15
