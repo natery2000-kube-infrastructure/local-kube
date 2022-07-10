@@ -8,5 +8,5 @@ roleRef:
   name: kube-event-responder-cluster-role
 subjects:
 - kind: ServiceAccount
-  name: kube-event-responder-service-account
+  name: kube-event-responder-serviceaccount
   namespace: default
