@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: streaming-couchdb-configmap
+data:
+  schema.yaml: |
+    testing
