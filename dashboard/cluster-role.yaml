@@ -12,6 +12,10 @@ rules:
         "roles.rbac.authorization.k8s.io",
         "batch",
         "autoscaling",
+        "networking.k8s.io",
+        "storage.k8s.io",
+        "apiextensions.k8s.io",
+        "metrics.k8s.io"
       ]
     resources:
       [
@@ -35,8 +39,15 @@ rules:
         "events",
         "pods",
         "pods/log",
+        "nodes",
         "secrets",
         "deployments/scale",
-        "horizontalpodautoscalers"
+        "horizontalpodautoscalers",
+        "networkpolicies",
+        "ingresses",
+        "ingressclasses",
+        "storageclasses",
+        "customresourcedefinitions",
+        "endpoints",
       ]
     verbs: ["create", "update", "delete", "get", "patch", "list"]

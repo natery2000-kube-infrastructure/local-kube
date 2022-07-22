@@ -17,3 +17,7 @@ spec:
       containers:
         - name: kube-auto-apply
           image: natery2000/kube-auto-apply:1.0.27
+          resources:
+            limits:
+              memory: "20Mi"
+              cpu: "100m"
