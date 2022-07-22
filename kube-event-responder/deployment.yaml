@@ -17,3 +17,7 @@ spec:
       containers:
         - name: kube-event-responder
           image: natery2000/kube-event-responder:1.0.29
+          resources:
+            limits:
+              memory: "20Mi"
+              cpu: "100m"
