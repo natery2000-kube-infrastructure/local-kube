@@ -16,4 +16,11 @@ spec:
       serviceAccountName: kube-event-responder-serviceaccount
       containers:
         - name: kube-event-responder
-          image: natery2000/kube-event-responder:1.0.33
+          image: natery2000/kube-event-responder:1.0.47
+          volumeMounts:
+            - name: config
+              mountPath: /config/
+      volumes:
+        - name: config
+          configMap: 
+            name: kube-event-responder-configmap

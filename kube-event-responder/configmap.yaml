@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kube-event-responder-configmap
+data:
+  handlers.json: |
+    {
+      "handlers": [
+        { 
+          "handlerType": "KubectlCommandHandler",
+          "options":"kubectl create job --from=cronjob/streaming-couchdb-bootstrapper-cronjob streaming-couchdb-bootstrapper-job",
+          "action": "MODIFIED",
+          "resourceName": "streaming-couchdb-configmap"
+        },
+        { 
+          "handlerType": "PrintlnHandler",
+          "options":"hello world",
+          "action": "MODIFIED",
+          "resourceName": "streaming-couchdb-configmap"
+        }
+      ]
+    }
+

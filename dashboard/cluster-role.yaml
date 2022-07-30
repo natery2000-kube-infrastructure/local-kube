@@ -49,5 +49,6 @@ rules:
         "storageclasses",
         "customresourcedefinitions",
         "endpoints",
+        "pods/exec",
       ]
     verbs: ["create", "update", "delete", "get", "patch", "list"]

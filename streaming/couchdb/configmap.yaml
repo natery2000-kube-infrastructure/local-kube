@@ -3,5 +3,9 @@ kind: ConfigMap
 metadata:
   name: streaming-couchdb-configmap
 data:
-  schema.yaml: |
-    testing
+  schema.json: |
+    {
+      "databases": [
+        "testing"
+      ]
+    }
