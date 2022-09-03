@@ -14,7 +14,7 @@ spec:
           restartPolicy: Never
           containers:
             - name: streaming-couchdb-bootstrapper
-              image: natery2000/couchdb-bootstrapper:1.0.3
+              image: natery2000/couchdb-bootstrapper:1.0.7
               volumeMounts:
                 - name: config
                   mountPath: /config/
