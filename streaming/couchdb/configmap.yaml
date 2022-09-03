@@ -6,6 +6,31 @@ data:
   schema.json: |
     {
       "databases": [
-        "testing"
+        {
+          "name": "_users"
+        },
+        {
+          "name": "_replicator"
+        },
+        {
+          "name": "_global_changes"
+        },
+        {
+          "name": "test1",
+          "designdocs": [
+            {
+              "name": "asdfdesign",
+              "views": {
+                "asdfview": {
+                  "map": "function (doc) {\n  emit(doc._id, 1);\n}"
+                }
+              },
+              "language": "javascript"
+            }
+          ]
+        },
+        {
+          "name": "test2"
+        }
       ]
     }

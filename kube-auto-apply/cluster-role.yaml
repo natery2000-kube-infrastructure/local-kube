@@ -10,6 +10,7 @@ rules:
         "apps",
         "rbac.authorization.k8s.io",
         "roles.rbac.authorization.k8s.io",
+        "batch"
       ]
     resources:
       [
@@ -23,5 +24,6 @@ rules:
         "persistentvolumeclaims",
         "clusterrolebindings",
         "clusterroles",
+        "cronjobs"
       ]
     verbs: ["create", "update", "delete", "get", "patch"]
