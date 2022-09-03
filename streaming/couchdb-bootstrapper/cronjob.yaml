@@ -8,13 +8,13 @@ spec:
   schedule: "* * * * *"
   jobTemplate:
     spec:
-      ttlSecondsAfterFinished: 10
+      ttlSecondsAfterFinished: 6000
       template:
         spec:    
           restartPolicy: Never
           containers:
             - name: streaming-couchdb-bootstrapper
-              image: natery2000/couchdb-bootstrapper:1.0.7
+              image: natery2000/couchdb-bootstrapper:1.0.8
               volumeMounts:
                 - name: config
                   mountPath: /config/
