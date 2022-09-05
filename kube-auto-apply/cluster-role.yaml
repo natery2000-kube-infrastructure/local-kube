@@ -26,6 +26,6 @@ rules:
         "clusterrolebindings",
         "clusterroles",
         "cronjobs",
-        "storageclass"
+        "storageclasses"
       ]
     verbs: ["create", "update", "delete", "get", "patch"]
