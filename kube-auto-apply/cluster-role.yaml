@@ -8,9 +8,10 @@ rules:
         "",
         "extensions",
         "apps",
+        "batch",
         "rbac.authorization.k8s.io",
         "roles.rbac.authorization.k8s.io",
-        "batch"
+        "storage.k8s.io"
       ]
     resources:
       [
@@ -24,6 +25,7 @@ rules:
         "persistentvolumeclaims",
         "clusterrolebindings",
         "clusterroles",
-        "cronjobs"
+        "cronjobs",
+        "storageclass"
       ]
     verbs: ["create", "update", "delete", "get", "patch"]
