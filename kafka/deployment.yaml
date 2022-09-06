@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-label
+  template:
+    metadata:
+      labels:
+        app: kafka-label
+    spec:    
+      containers:
+        - name: kafka
+          image: bitnami/kafka:latest
+          env:
+          - name: KAFKA_BROKER_ID
+            value: "1"
+          - name: KAFKA_CFG_LISTENERS
+            value: INTERNAL://:9092,CLIENT://:42000
+          - name: KAFKA_CFG_ADVERTISED_LISTENERS
+            value: INTERNAL://localhost:9092,CLIENT://localhost:42000
+          - name: KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP
+            value: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CLIENT:PLAINTEXT
+          - name: KAFKA_CFG_INTER_BROKER_LISTENER_NAME
+            value: INTERNAL
+          - name: KAFKA_CFG_ZOOKEEPER_CONNECT
+            value: zookeeper-service:42100
+          - name: ALLOW_PLAINTEXT_LISTENER
+            value: "yes"
+          volumeMounts:
+          - name: kafka-volume
+            mountPath: /bitnami/kafka
+          ports:
+            - containerPort: 42000
+              name: kafka-port
+      volumes:
+        - name: kafka-volume
+          persistentVolumeClaim:
+            claimName: kafka-pvc
