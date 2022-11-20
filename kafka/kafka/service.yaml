@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: kafka-label
+  ports:
+  - name: kafka-port0
+    port: 42000
+    targetPort: kafka-port0
+    protocol: TCP
+  - name: kafka-port1
+    port: 42001
+    targetPort: kafka-port1
+    protocol: TCP
